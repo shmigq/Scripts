@@ -867,6 +867,4 @@ getgenv().Prediction = 0.157
  
  
                                 end)
-Tab4:Button("Animation",function()
-		
-end)
+
