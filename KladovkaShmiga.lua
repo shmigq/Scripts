@@ -155,83 +155,19 @@ local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gami
             Instance.CameraType = Enum.CameraType.Custom
             Instance.CFrame = CurrentFocus
         end)
-        Tab1:Button("Auto Eat Chicken",function()
-            Game.StarterGui:SetCore("SendNotification", {Title = "HSBC", Text = "Autoeat Activado [50 Health]", Duration = 60
-
-        })
-
-        while wait() do
-                pcall(function()
-                    if game.Players.LocalPlayer.Character.Humanoid.Health > 50 then
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
-                        if game.Players.LocalPlayer.Character:FindFirstChild("[Chicken]") == nil or game.Players.LocalPlayer.Backpack:FindFirstChild("[Chicken]") == nil then
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop["[Chicken] - $7"].Head.CFrame
-                            wait(0.5)
-                            fireclickdetector(game.Workspace.Ignored.Shop["[Chicken] - $7"].ClickDetector)
-                        end
-                        pcall(function()game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["[Chicken]"])end)
-                        pcall(function()
-                            game.Players.LocalPlayer.Character["[Chicken]"]:Activate()
-                            wait(0.1)
-                            game.Players.LocalPlayer.Character["[Chicken]"]:Deactivate()
-                        end)
-                    end
-                end)
-            end
-        end)
-        Tab1:Button("no jump cd",function()
-            --auto exc support
-        if not game.IsLoaded(game) then 
-            game.Loaded.Wait(game.Loaded);
-        end
-
-        -- variables 
-        local IsA = game.IsA;
-        local newindex = nil 
-
-        -- main hook
-        newindex = hookmetamethod(game, "__newindex", function(self, Index, Value)
-            if not checkcaller() and IsA(self, "Humanoid") and Index == "JumpPower" then 
-                return
-            end
-            
-            return newindex(self, Index, Value);
-        end)
-        end)
-        Tab1:Button("Semi God",function()
-            coroutine.resume(coroutine.create(function()
-                while wait() do
-                    if game.Players.LocalPlayer.Character.BodyEffects.Armor.Value < 10 then
-                        _G.savedhumanoidpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-                        local target = game:GetService("Workspace").Ignored.Shop["[High-Medium Armor] - 2300"].Head.CFrame
-                        player.Character.HumanoidRootPart.CFrame = CFrame.new(target)
-                        wait(.5)
-                        fireclickdetector(game.Workspace.Ignored.Shop['[High-Medium Armor] - 2300'].ClickDetector)
-                        wait()
-                        fireclickdetector(game.Workspace.Ignored.Shop['[High-Medium Armor] - 2300'].ClickDetector)
-                        wait(.5)
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(_G.savedhumanoidpos)
-                    end
-                    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health < 70 then
-                        _G.savedhumanoidpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-                        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-789.114, -39.6752, -942.038)
-                        wait(.5)
-                        fireclickdetector(game.Workspace.Ignored.Shop['[Pizza] - $5'].ClickDetector)
-                        wait()
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(_G.savedhumanoidpos)
-                        for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                            if v.Name == '[Pizza]' then
-                                v.Parent = game.Players.LocalPlayer.Character
-                                for i = 1, 6 do
-                                    v:Activate()
-                                    wait(.5)
-                                    v:Activate()
-                                end
-                            end
-                        end
-                    end 
-                end
-            end))
+        Tab1:Button("Animation",function()
+           while true do
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+wait(1)
+end
 
         end)
         Tab1:Button("Fly (Q)",function()
@@ -932,16 +868,5 @@ getgenv().Prediction = 0.157
  
                                 end)
 Tab4:Button("Animation",function()
-		while true do
-local Animate = game.Players.LocalPlayer.Character.Animate
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
-game.Players.LocalPlayer.Character.Humanoid.Jump = false
-wait(1)
-end
+		
 end)
